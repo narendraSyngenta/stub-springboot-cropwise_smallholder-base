@@ -2,9 +2,6 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.0
-
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   build:  
@@ -17,8 +14,6 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
-      # SonarCloud scan to look for code smells
-      - sonarcloud/scan
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Analyze on SonarCloud
