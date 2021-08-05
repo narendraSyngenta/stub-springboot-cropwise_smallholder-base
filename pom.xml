@@ -11,6 +11,7 @@
 	<groupId>com.syngenta</groupId>
 	<artifactId>cropwise.smallholder.stub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>Cropwise Smallholder Stub</name>
 	<description>Stub API</description>
 	<properties>
