@@ -21,24 +21,20 @@ Set the `id` environment variable with differente integer values to understand h
 ### Contributing
 Try to follow the suggested package structure and classes' naming convention:
 
-com <br>
-└─ syngenta <br>
-  └─ cropwise <br>
-    └─ smallholder <br>
-      └─ stub <br>
-        └─ api <br>
-          └─ helloworld <br>
-            └─ controller <br>
-              └─ HelloWord**Controller**.java <br>
-            └─ data <br>
-              └─ request <br>
-                └─ GetAll**QueryParams**.java <br>
-          ├─ **[your API's base resource]** <br>
-            └─ controller <br>
-              └─ **[resource name]-Controller**.java <br>
-            └─ data <br>
-              └─ request <br>
-                └─ **[method name]-QueryParams**.java <br>
-                └─ **[method name]-Body** (when you need to validate the payload structure) <br>
+com.syngenta.cropwise.smallholder.stub <br>
+  └─ api <br>
+    └─ helloworld <br>
+      └─ controller <br>
+        └─ HelloWord**Controller**.java <br>
+      └─ data <br>
+        └─ request <br>
+          └─ GetAll**QueryParams**.java <br>
+    ├─ **[your API's base resource]** <br>
+      └─ controller <br>
+        └─ **[resource name]-Controller**.java <br>
+      └─ data <br>
+        └─ request <br>
+          └─ **[method name]-QueryParams**.java <br>
+          └─ **[method name]-Body** (when you need to validate the payload structure) <br>
 
 Feel free to propose conventions for unforeseen cases or to update existing ones.
