@@ -31,7 +31,3 @@ workflows:
     jobs:
       - build:
           context: sonarcloud-token
-          filters:
-            branches:
-              only:
-                - main
