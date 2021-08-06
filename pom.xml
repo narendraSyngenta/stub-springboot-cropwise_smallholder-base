@@ -19,6 +19,8 @@
 		<sonar.projectKey>syngenta-digital_stub-springboot-cropwise_smallholder-base</sonar.projectKey>
         <sonar.organization>syngenta-digital</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,6 +53,50 @@
 					</excludes>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.3</version>
+                <configuration>
+                    <excludes>
+                        <exclude>com/syngenta/growerconsole/model/*</exclude>
+                        <exclude>com/syngenta/growerconsole/exceptions/handler/*</exclude>
+                        <exclude>com/syngenta/growerconsole/entity/*</exclude>
+                        <exclude>com/syngenta/growerconsole/security/*</exclude>
+                        <exclude>com/syngenta/growerconsole/legacy/*</exclude>
+                        <exclude>com/syngenta/growerconsole/controller/SwaggerController.class</exclude>
+                    </excludes>
+                    <outputDirectory>target/jacoco-report</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>default-report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.8.0.2131</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sonar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
