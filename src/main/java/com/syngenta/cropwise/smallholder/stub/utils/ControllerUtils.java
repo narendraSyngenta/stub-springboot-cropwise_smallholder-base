@@ -1,7 +1,6 @@
 package com.syngenta.cropwise.smallholder.stub.utils;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +21,8 @@ public class ControllerUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return Collections.emptyList();
+//        return Collections.emptyList();
+        return null;
     }
 
     @SuppressWarnings("unchecked")
