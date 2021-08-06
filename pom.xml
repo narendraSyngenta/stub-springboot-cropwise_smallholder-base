@@ -9,13 +9,16 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.syngenta</groupId>
-	<artifactId>cropwise.smallholder.stub</artifactId>
+	<artifactId>cropwise-smallholder-stub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Cropwise Smallholder Stub</name>
 	<description>Stub API</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>syngenta-digital_stub-springboot-cropwise_smallholder-base</sonar.projectKey>
+        <sonar.organization>syngenta-digital</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
