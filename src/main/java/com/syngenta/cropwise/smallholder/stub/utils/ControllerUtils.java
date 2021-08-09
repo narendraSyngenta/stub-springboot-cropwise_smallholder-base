@@ -13,16 +13,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ControllerUtils {
 
-    @SuppressWarnings("unchecked")
     public static List<Map<String, Object>> jsonStringToMapList(String jsonString) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(jsonString, List.class);
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         }
 //        return Collections.emptyList();
-        return null;
     }
 
     @SuppressWarnings("unchecked")
