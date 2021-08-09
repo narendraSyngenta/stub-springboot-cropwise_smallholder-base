@@ -16,9 +16,6 @@ jobs:
       - checkout
       # Use mvn clean and package as the standard maven build phase
       - run:
-          name: Analyze on SonarCloud
-          command: mvn verify sonar:sonar
-      - run:
           name: Build
           command: mvn -B -DskipTests clean package
 
@@ -29,5 +26,4 @@ workflows:
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
   sample: 
     jobs:
-      - build:
-          context: sonarcloud-token
+      - build
