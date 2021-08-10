@@ -33,7 +33,8 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.csrf().disable()
+          .authorizeRequests()
           .antMatchers("/api/health").permitAll()
           .anyRequest().authenticated()
           .and()
