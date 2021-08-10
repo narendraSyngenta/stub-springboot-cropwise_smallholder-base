@@ -23,7 +23,7 @@ Set the `id` environment variable with differente integer values to understand h
 
 ### Version Control
 
-- Git-flow, _checking out from_ / _merging to_ branch `develop`;
+- Git-flow-like, _checking out from_ / _merging to_ branch `main` - there's no "develop" branch, since it's a simple project;
 - 1 reviewer required;
 - Be gentle in the comments when code reviewing;
 - Test the changes before merging.
