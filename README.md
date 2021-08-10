@@ -8,6 +8,11 @@
 
 The app will be listening on `port: 8080`
 
+For testing in AWS environment, `Basic Auth` is required:<br>
+`base url`: `http://stubcropwisesmallholder-env.eba-wtsypmxs.us-east-2.elasticbeanstalk.com`<br>
+`username`: `frontend`<br>
+`password`: `FFrNnU99G3GNBNaU`<br>
+
 ## Examples
 Find sample requests on `Cropwise SmallHolder API Stub.postman_collection.json` file, in the root folder.
 
