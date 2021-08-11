@@ -59,3 +59,4 @@ com.syngenta.cropwise.smallholder.stub <br>
           └─ **[method name]-Body** (when you need to validate the payload structure) <br>
 
 Feel free to propose conventions for unforeseen cases or to update existing ones.
+
